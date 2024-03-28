@@ -90,7 +90,7 @@ column_mapping.text_features = text_features
 def setup_report():
     data_drift_report = Report(
         metrics=[
-            DatasetDriftMetric(columns=["text"]),
+            DataDriftTable(columns=["text"]),
         ]
     )
     data_drift_report.run(reference_data=merged_df,
